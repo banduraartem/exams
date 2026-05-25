@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бандура Артем Іванович - ПІ-23-02</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="site-logo">MySite</div>
+        <nav class="main-nav">
+            <ul class="menu-list">
+                <li><a href="#home">Головна</a></li>
+                <li><a href="#services">Послуги</a></li>
+                <li><a href="#about">Про нас</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+            </ul>
+        </nav>
+        <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main class="page-body">
+        <section id="home" class="hero-block">
+            <h1 class="main-heading">Ласкаво просимо на сайт Бандура Артем Іванович</h1>
+            <p class="hero-text">Сучасні рішення для вашого бізнесу, розроблені з урахуванням найновіших технологій та стандартів веб-верстки.</p>
+        </section>
+        
+        <section id="services" class="cards-section">
+            <h2 class="section-title">Наші Послуги</h2>
+            <div class="cards-container">
+                <article class="info-card">
+                    <div class="card-image" style="background-image: url('https://via.placeholder.com/60');"></div>
+                    <h3 class="card-title">H3 Heading</h3>
+                    <p class="card-text">Loreen ipsum dolor sit amet consectetuer adipiscing sed euilraut aullomem eeedutia dumot</p>
+                    <a href="#about" class="more-link">More</a>
+                </article>
+
+                <article class="info-card">
+                    <div class="card-image" style="background-image: url('https://via.placeholder.com/60');"></div>
+                    <h3 class="card-title">H3 Heading</h3>
+                    <p class="card-text">Loreen ipsum dolor sit amet consectetuer adipiscing sed euilraut aullomem eeedutia dumot</p>
+                    <a href="#about" class="more-link">More</a>
+                </article>
+
+                <article class="info-card">
+                    <div class="card-image" style="background-image: url('https://via.placeholder.com/60');"></div>
+                    <h3 class="card-title">H3 Heading</h3>
+                    <p class="card-text">Loreen ipsum dolor sit amet consectetuer adipiscing sed euilraut aullomem eeedutia dumot</p>
+                    <a href="#about" class="more-link">More</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2 class="section-title">Про нас</h2>
+            <div class="about-content">
+                <p>Ми — команда професіоналів, що займається створенням високоякісних веб-сайтів та інтерфейсів. Наша мета — поєднувати естетичний дизайн із передовими технологіями верстки для досягнення найкращого результату.</p>
+                <p>Кожен проект адаптується під мобільні пристрої та оптимізується для швидкого завантаження на будь-яких екранах.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacts" class="page-footer">
+        <div class="footer-info">
+            <div class="footer-copy">© 2025. Всі права захищені. Бандура А. І. Група ПІ-23-02</div>
+            <p class="footer-contacts">Зв'яжіться з нами: info@mysite.com | +380 99 999 9999</p>
+        </div>
+        <div class="footer-socials">
+            <span class="social-box" style="background-image: url('https://via.placeholder.com/30');"></span>
+            <span class="social-box" style="background-image: url('https://via.placeholder.com/30');"></span>
+            <span class="social-box" style="background-image: url('https://via.placeholder.com/30');"></span>
+        </div>
+    </footer>
+
+    <script>
+        const burgerBtn = document.querySelector('.burger-menu');
+        const menuList = document.querySelector('.menu-list');
+        const menuLinks = document.querySelectorAll('.menu-list a');
+
+        burgerBtn.addEventListener('click', () => {
+            menuList.classList.toggle('open');
+            burgerBtn.classList.toggle('toggle');
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuList.classList.remove('open');
+                burgerBtn.classList.remove('toggle');
+            });
+        });
+    </script>
+</body>
+</html>
